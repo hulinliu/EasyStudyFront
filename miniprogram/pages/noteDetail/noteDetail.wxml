@@ -1,0 +1,35 @@
+<!--miniprogram/pages/noteDetail/noteDetail.wxml-->
+<view class='container'>
+  <view>
+    <text>{{head}}</text>
+  </view>
+  <view>
+    <text style='color:gray;font-size:30rpx'>{{time}}</text>
+  </view>
+
+  <scroll-view wx:if='{{type==3||type==4}}' style='margin:30rpx;width:80%'>
+    <view style=" word-break: break-all">{{content}}</view>
+  </scroll-view>
+
+  <cover-view wx:if='{{type==2}}'>
+    <cover-image style='width:80rpx;  height: 80rpx;margin:20rpx' src='/images/index/voice2.png' bindtap='playVoice'></cover-image>
+  </cover-view>
+
+  <cover-view wx:if='{{type==1||type==4}}'>
+    <view wx:for='{{images}}' class='container2'>
+      <!-- <image src='{{item.tempFileURL}}'></image> -->
+      <cover-image src='{{item}}' style='border-radius: 10px;width:100%;height:100%'></cover-image>
+    </view>
+  </cover-view>
+  <view class='container1'>
+    <view class='line-css' style='margin-left:10%;width:30%;'></view>
+    <view>
+      <text style='color:gray;font-size:30rpx'>已经到底了</text>
+    </view>
+    <view class='line-css' style='width:30%'></view>
+  </view>
+
+
+  <!-- <button style='width:30%;top:10%; background-color:#81D2C7; margin-top:30rpx' open-type='share'>转发</button> -->
+
+</view>

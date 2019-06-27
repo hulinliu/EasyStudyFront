@@ -1,0 +1,62 @@
+<!-- miniprogram/pages/test/test.wxml
+<button type="primary" size="mini" bindtap="chooseImage">添加图片</button>
+<image src="{{item}}" mode="aspectFill" data-idx="{{index}}"></image>
+<button bindtap='uploadImage'>点击上传</button>
+<button type='primary' bindtap='getAccess_token'>获取getAccess_token</button>
+
+<button type='primary' bindtap='addDataBase'>数据库增加数据</button>
+<button bindtap='gettime'>获取时间</button>
+<button bindtap='getImage'>获得图片</button>
+
+<image src='{{image}}'></image> -->
+
+
+<!-- 顶部菜单栏 -->
+
+<!--index.wxml-->
+<view class="swiper-tab">
+  <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">哈哈</view>
+  <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">呵呵</view>
+  <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">嘿嘿</view>
+</view>
+
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
+  <!-- 我是哈哈 -->
+  <swiper-item>
+  <view class='container'>
+      <view style='margin:0;position: absolute;width:100%;height:650rpx'>
+        <image src='{{image}}' style='width:100%;height:100%'></image>
+      </view>
+      <view class='container2' style='position: relative;top:500rpx'>
+        <view style='color:black;  text-align: center;'>今天,你看英语了吗？</view>
+        <view style='text-align: center;'>
+          <text style='font-size: 20rpx;color:#81D2C7'>{{time}}</text>
+        </view>
+        <view class='line-css' style='margin-top:0%;'></view>
+        <view style='display:flex;flex-flow: wrap row;'>
+          <view style='width:90%'>{{engword}}</view>
+          <view style='width:5%'>
+            <image src='/images/index/laba.png' bindtap='play' style='width:30rpx;height:30rpx'></image>
+          </view>
+          <view style='width:90%'>{{chnword}}</view>
+        </view>
+
+        <view class='line-css' style='margin-top:0%;'></view>
+        <view> {{myword}}</view>
+
+      </view>
+      <view style='width:40%;position: relative;top:550rpx'>
+        <button open-type="share">转发</button>
+      </view>
+
+    </view>
+  </swiper-item>
+  <!-- 我是呵呵 -->
+  <swiper-item>
+    <view>我是呵呵</view>
+  </swiper-item>
+  <!-- 我是嘿嘿 -->
+  <swiper-item>
+    <view>我是嘿嘿</view>
+  </swiper-item>
+</swiper>

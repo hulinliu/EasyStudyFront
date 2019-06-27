@@ -1,0 +1,30 @@
+/* miniprogram/pages/noteDetail/noteDetail.wxss */
+.container1{
+    height: 100%;
+    width:100%;
+    display:flex;
+    flex-flow: wrap row;
+    background:rgba(128, 128, 128, 0);
+    border-radius: 10px;
+    margin-top: 30rpx;
+}
+/* 子容器 */
+.container2{
+    height: 90%;
+    width:90%;
+    /* background-color:beige; */
+    display:flex;
+    flex-flow: wrap column;
+    justify-content: center;
+    background:rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 0 5px gray ;
+     margin: 30rpx; 
+}
+.line-css {
+  height: 1px;
+  width: 100%;
+  background: rgba(128, 128, 128, 0.842);
+  margin: 30rpx 0;
+  box-shadow: 500rpx;
+}
